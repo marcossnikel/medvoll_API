@@ -18,6 +18,7 @@ public class Doctor {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private String phone;
     private String crm;
     private String email;
 
@@ -31,6 +32,7 @@ public class Doctor {
         this.name = data.name();
         this.email = data.email();
         this.crm = data.crm();
+        this.phone = data.phone();
         this.specialty = data.specialty();
         this.address = new Address(data.address());
     }
